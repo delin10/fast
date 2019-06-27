@@ -1,0 +1,73 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>nil.ed</groupId>
+    <artifactId>easy_dio</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+
+    <name>easy_dio</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <github.global.server>github</github.global.server>
+        <!--防止每次都会变成1.5-->
+        <java.version>1.8</java.version>
+        <!--add  maven release-->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <!--maven deploy property-->
+        <repository.name>dio</repository.name><!--仓库的名称-->
+        <repository.owner>delin10</repository.owner><!--仓库用户-->
+        <branch.name>dio</branch.name><!--分支的名称-->
+        <jar.output.dir>dio</jar.output.dir><!--输出文件的文件夹名称,一般跟项目名一致-->
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.1</version>
+                <configuration>
+                    <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/${jar.output.dir}</altDeploymentRepository>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version>0.12</version>
+                <configuration>
+                    <message>Maven artifacts for ${project.version}</message>
+                    <noJekyll>true</noJekyll>
+                    <outputDirectory>${project.build.directory}/${jar.output.dir}</outputDirectory><!--本地jar地址-->
+                    <branch>refs/heads/${branch.name}</branch><!--分支的名称-->
+                    <merge>true</merge>
+                    <includes>
+                        <include>**/*</include>
+                    </includes>
+                    <repositoryName>${repository.name}</repositoryName><!--对应github上创建的仓库名称 name-->
+                    <repositoryOwner>${repository.owner}</repositoryOwner><!--github 仓库所有者即登录用户名-->
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        <phase>deploy</phase>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

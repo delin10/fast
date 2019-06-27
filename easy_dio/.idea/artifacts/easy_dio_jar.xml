@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="easy_dio:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/easy_dio_jar</output-path>
+    <root id="archive" name="easy_dio.jar">
+      <element id="module-output" name="easy_dio" />
+    </root>
+  </artifact>
+</component>

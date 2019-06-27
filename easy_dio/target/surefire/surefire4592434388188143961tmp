@@ -1,0 +1,26 @@
+#surefire
+#Sun Jun 23 20:34:20 CST 2019
+testClassesDirectory=E\:\\000Code\\idea\\fast\\easy_dio\\target\\test-classes
+classPathUrl.3=C\:\\Users\\\u674E\u5FB7\u6797\\.m2\\repository\\org\\hamcrest\\hamcrest-core\\1.3\\hamcrest-core-1.3.jar
+classPathUrl.2=C\:\\Users\\\u674E\u5FB7\u6797\\.m2\\repository\\junit\\junit\\4.11\\junit-4.11.jar
+useManifestOnlyJar=true
+classPathUrl.1=E\:\\000Code\\idea\\fast\\easy_dio\\target\\classes
+reportsDirectory=E\:\\000Code\\idea\\fast\\easy_dio\\target\\surefire-reports
+classPathUrl.0=E\:\\000Code\\idea\\fast\\easy_dio\\target\\test-classes
+providerConfiguration=org.apache.maven.surefire.junit4.JUnit4Provider
+testSuiteDefinitionTestSourceDirectory=E\:\\000Code\\idea\\fast\\easy_dio\\src\\test\\java
+surefireClassPathUrl.1=C\:\\Users\\\u674E\u5FB7\u6797\\.m2\\repository\\org\\apache\\maven\\surefire\\surefire-api\\2.12.4\\surefire-api-2.12.4.jar
+surefireClassPathUrl.0=C\:\\Users\\\u674E\u5FB7\u6797\\.m2\\repository\\org\\apache\\maven\\surefire\\surefire-junit4\\2.12.4\\surefire-junit4-2.12.4.jar
+runOrder=filesystem
+useSystemClassLoader=true
+excludes0=**/*$*
+isTrimStackTrace=true
+tc.1=nil.ed.mmapio.MapIOTest
+tc.0=nil.ed.AppTest
+enableAssertions=true
+includes2=**/*TestCase.java
+failIfNoTests=false
+includes1=**/*Test.java
+runStatisticsFile=E\:\\000Code\\idea\\fast\\easy_dio\\.surefire-51F754BF365435ACBD01DBB6D24CA02FDCE83C46
+includes0=**/Test*.java
+childDelegation=false
